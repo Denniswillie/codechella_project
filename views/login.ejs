@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <div class="form-signin">
+            <button onclick = "login(this.id)" id="google" class="btn btn-lg btn-google btn-block text-uppercase"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+            <button onclick = "login(this.id)" id="facebook" class="btn btn-lg btn-facebook btn-block text-uppercase"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+            <button onclick = "login(this.id)" id="outlook" class="btn btn-lg btn-microsoft btn-block text-uppercase"><i class="fab fa-windows mr-2"></i> Sign in with Microsoft</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function login(authSource) {
+    window.location.href = "auth/" + authSource;
+  }
+</script>
+<%- include('partials/footer') %>
